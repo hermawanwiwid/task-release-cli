@@ -5,7 +5,8 @@ import { JsonStore } from "../storage/jsonStore.js";
 /**
  * Core list formatting logic.
  *
- * Returns one line per task in the form: `1. [pending] Title`.
+ * Returns one line per task in checkbox form: `[ ] #1  Title` for pending
+ * and `[x] #1  Title` for done.
  * Kept pure (no I/O) so it can be unit tested directly.
  */
 export function formatTasks(tasks: Task[]): string {
@@ -14,7 +15,10 @@ export function formatTasks(tasks: Task[]): string {
   }
 
   return tasks
-    .map((task) => `${task.id}. [${task.status}] ${task.title}`)
+    .map((task) => {
+      const checkbox = task.status === "done" ? "[x]" : "[ ]";
+      return `${checkbox} #${task.id}  ${task.title}`;
+    })
     .join("\n");
 }
 
