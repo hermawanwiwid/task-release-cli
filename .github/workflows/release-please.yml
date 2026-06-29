@@ -1,0 +1,23 @@
+name: release-please
+
+# Runs every time something lands on main. release-please looks at the
+# Conventional Commits since the last release and keeps a "Release PR" up to
+# date. When you merge that Release PR, it tags the version and publishes the
+# GitHub Release automatically.
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write       # needed to create tags and the GitHub Release
+  pull-requests: write  # needed to open/update the Release PR
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
