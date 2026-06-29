@@ -5,6 +5,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/hermawanwiwid/task-release-cli/compare/v1.0.0...v1.1.0) (2026-06-29)
+
+
+### Features
+
+* add delete command to remove a task ([df13a18](https://github.com/hermawanwiwid/task-release-cli/commit/df13a18db806605cc23001f9a032f4be081664a0))
+
 ## [Unreleased]
 
 ## [1.0.0] - 2026-06-29
