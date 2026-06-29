@@ -1,0 +1,45 @@
+{
+  "name": "task-release-cli",
+  "version": "0.1.0",
+  "description": "A simple CLI task manager for tracking release, feature, and bugfix tasks during development.",
+  "type": "module",
+  "bin": {
+    "tasker": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "cli",
+    "task",
+    "release",
+    "semver",
+    "todo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "^8.57.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}

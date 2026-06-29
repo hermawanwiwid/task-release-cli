@@ -1,0 +1,12 @@
+# Source and dev-only files are excluded from the published package.
+src/
+tests/
+docs/
+.github/
+.eslintrc.cjs
+tsconfig.json
+vitest.config.ts
+CHANGELOG.md
+.gitignore
+*.log
+.DS_Store
