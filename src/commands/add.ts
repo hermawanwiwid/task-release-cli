@@ -34,9 +34,14 @@ export function registerAddCommand(program: Command, store: JsonStore): void {
     .argument("<title>", "Title of the task")
     .action((title: string) => {
       const tasks = store.load();
-      const task = addTask(tasks, title);
-      tasks.push(task);
-      store.save(tasks);
-      console.log(`Task added: ${task.title}`);
+      try {
+        const task = addTask(tasks, title);
+        tasks.push(task);
+        store.save(tasks);
+        console.log(`Task added: ${task.title}`);
+      } catch (error) {
+        console.error((error as Error).message);
+        process.exitCode = 1;
+      }
     });
 }
