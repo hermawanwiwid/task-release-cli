@@ -10,15 +10,15 @@ The CLI binary is called **`tasker`**.
 > CHANGELOG, Git tags, and GitHub/GitLab Releases). See
 > [docs/release-workflow.md](docs/release-workflow.md).
 
-## Features (v0.1.0)
+## Features
 
 - `tasker add "title"` — add a new task
 - `tasker list` — list all tasks
+- `tasker done <id>` — mark a task as done
 - `tasker --version` — print the CLI version
 
-> `done` and `delete` commands are intentionally **not** implemented yet — they
-> are planned for later feature releases so the release workflow can be
-> practised end to end.
+> `delete` is intentionally **not** implemented yet — it is planned for a later
+> feature release so the release workflow can keep being practised end to end.
 
 ## Installation
 
@@ -48,11 +48,18 @@ npm run dev -- list
 tasker add "Prepare release branch"
 # Task added: Prepare release branch
 
+tasker add "Write changelog"
+# Task added: Write changelog
+
+tasker done 1
+# Task done: Prepare release branch
+
 tasker list
-# 1. [pending] Prepare release branch
+# [x] #1  Prepare release branch
+# [ ] #2  Write changelog
 
 tasker --version
-# 0.1.0
+# 1.0.0
 ```
 
 ### Where are tasks stored?
