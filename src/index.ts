@@ -6,6 +6,7 @@ import { Command } from "commander";
 import { JsonStore } from "./storage/jsonStore.js";
 import { registerAddCommand } from "./commands/add.js";
 import { registerListCommand } from "./commands/list.js";
+import { registerDoneCommand } from "./commands/done.js";
 
 /** Read the CLI version from package.json so --version stays in sync. */
 function readVersion(): string {
@@ -26,6 +27,7 @@ export function buildProgram(store: JsonStore = new JsonStore()): Command {
 
   registerAddCommand(program, store);
   registerListCommand(program, store);
+  registerDoneCommand(program, store);
 
   return program;
 }
