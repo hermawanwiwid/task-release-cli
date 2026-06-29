@@ -15,10 +15,8 @@ The CLI binary is called **`tasker`**.
 - `tasker add "title"` — add a new task
 - `tasker list` — list all tasks
 - `tasker done <id>` — mark a task as done
+- `tasker delete <id>` — delete a task
 - `tasker --version` — print the CLI version
-
-> `delete` is intentionally **not** implemented yet — it is planned for a later
-> feature release so the release workflow can keep being practised end to end.
 
 ## Installation
 
