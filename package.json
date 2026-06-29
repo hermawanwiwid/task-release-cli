@@ -1,6 +1,6 @@
 {
   "name": "task-release-cli",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A simple CLI task manager for tracking release, feature, and bugfix tasks during development.",
   "type": "module",
   "bin": {
